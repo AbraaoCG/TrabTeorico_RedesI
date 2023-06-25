@@ -36,13 +36,13 @@
             <a class="nav-link" href="#introducao">Introdução</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Topologia">Topologia do Bluetooth</a>
+            <a class="nav-link" href="#Topologia">Topologia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Arquitetura">Arquitetura do Bluetooth</a>
+            <a class="nav-link" href="#Arquitetura">Arquitetura</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#ModosdeOperação">Modos de Operação</a>
+            <a class="nav-link" href="#Processo_Comunicacao">Processo de Comunicação</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#AntiInterferencia">Mecanismos contra a interferência</a>
@@ -57,7 +57,7 @@
             <a class="nav-link" href="#Aplicações_Bluetooth">Aplicações do Bluetooth</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Desafios_Perspectivas">Desafios e Perspectivas Futuras</a>
+            <a class="nav-link" href="#Desafios_Perspectivas">Desafios e Futuro</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#perguntas">Perguntas</a>
@@ -74,99 +74,58 @@
         <!-- Introdução -->
         <div class="container content" id="introducao">
           <h1 class="display-3 title">Introdução</h1>
-          <h1 class="display-4 title">Historia</h1>
           <ul>
             <p class="lead">
-              O Bluetooth não surgiu antes de qualquer forma de conexão sem fio. Houve outras tecnologias de comunicação
-              sem fio
-              desenvolvidas anteriormente, como o infravermelho (IR) e a rádio frequência (RF), que permitiam a
-              transferência de dados
-              entre dispositivos.
-              <br /><br />
-              O infravermelho foi amplamente utilizado para comunicação sem fio em dispositivos como controles remotos
-              de televisão,
-              transmissores de dados de curto alcance e dispositivos de comunicação entre computadores pessoais. No
-              entanto, o alcance
-              do infravermelho era limitado e exigia linha de visão direta entre os dispositivos.
-              <br /><br />
-              A tecnologia de rádio frequência (RF) também existia antes do Bluetooth e foi usada em várias aplicações,
-              como
-              comunicação por rádio, telefones sem fio e redes locais sem fio (Wi-Fi). Essas tecnologias permitiam uma
-              comunicação
-              mais robusta e com maior alcance do que o infravermelho.
-              <br /><br />
-              O Bluetooth foi desenvolvido posteriormente para abordar algumas das limitações e desafios das tecnologias
-              de
-              comunicação sem fio existentes. Ele foi projetado para fornecer uma forma mais conveniente de conexão sem
-              fio de curto
-              alcance, com foco em baixo consumo de energia, simplicidade de uso e interoperabilidade entre dispositivos
-              de diferentes
-              fabricantes.
-              <br /><br />
-              A tecnologia Bluetooth foi desenvolvida por uma equipe de engenheiros da empresa de telecomunicações sueca
-              Ericsson,
-              liderada por Jaap Haartsen e Sven Mattisson. Eles começaram a trabalhar no desenvolvimento do Bluetooth no
-              final da
-              década de 1990, com o objetivo de criar uma maneira conveniente e sem fio de conectar dispositivos
-              eletrônicos, como
-              telefones celulares e computadores.
-              <br /><br />
-              Embora a Ericsson tenha liderado o desenvolvimento inicial, o Bluetooth como tecnologia foi criado por
-              meio de uma
-              colaboração mais ampla entre várias empresas de tecnologia, a Bluetooth Special Interest Group (SIG) que
-              explicaremos
-              mais à frente.
-              <br /><br />
-              Um dos engenheiros da equipe que desenvolvia o Bluetooth estava lendo um livro histórico sobre Vikings e
-              isso inspirou a
-              ideia do nome “Bluetooth”: uma homenagem ao rei da Dinamarca e Noruega, Harald Blåtand, que na língua
-              inglesa é chamado
-              de Harold Bluetooth. O nome do rei foi escolhido pelo fato dele ter unificado as tribos de seu país,
-              semelhantemente ao
-              que a tecnologia pretende fazer: unificar tecnologias diferentes.
-              <br /><br />
-              Já o logotipo do Bluetooth é a união das runas nórdicas Hagall e Berkanan, correspondentes às letras H e B
-              do nosso
-              alfabeto (uma referência ao nome do rei Harald Blåtand). As runas nórdicas são um sistema de escrita
-              antigo utilizado
-              pelos povos germânicos do norte da Europa durante a Era Viking, composto por caracteres alfabéticos.
-              <br /><br />
-              <img src="images/image1.png" alt="Símbolos Bluetooth" width="50%">
-              <br /><br />
-              Além disso, "Blåtand" é uma palavra em dinamarquês que pode ser traduzida literalmente como "dente azul".
-              Na época em
-              que Harald Blåtand viveu, ele era conhecido por ter um dente que parecia ter uma tonalidade azulada, e
-              esse detalhe
-              físico acabou se tornando parte de sua identidade histórica.
-              <br /><br />
-            </p>
-          </ul>
-          <h1 class="display-4 title">Bluetooth SIG, o que é? E evolução</h1>
-          <ul>
-            <p class="lead">
+              
+              <p><strong>História do Bluetooth</strong></p>
+              <p>O Bluetooth não surgiu antes de qualquer forma de conexão sem fio. Houve outras tecnologias de comunicação sem fio desenvolvidas anteriormente, como o infravermelho (IR) e a rádio frequência (RF), que permitiam a transferência de dados entre dispositivos.</p>
+              <p>O infravermelho foi amplamente utilizado para comunicação sem fio em dispositivos como controles remotos de televisão, transmissores de dados de curto alcance e dispositivos de comunicação entre computadores pessoais. No entanto, o alcance do infravermelho era limitado e exigia linha de visão direta entre os dispositivos.</p>
+              <p>O Bluetooth foi desenvolvido posteriormente para abordar algumas das limitações e desafios das tecnologias de comunicação sem fio existentes. Ele foi projetado para fornecer uma forma mais conveniente de conexão sem fio de curto alcance, com foco em baixo consumo de energia, simplicidade de uso e interoperabilidade entre dispositivos de diferentes fabricantes.</p>
 
-              <br /><br />
+              <p><strong>Bluetooth e PAN</strong></p>
+              <p>Bluetooth é uma especificação industrial para Personal Area Networks (PANs), também conhecido como IEEE 802.15.1. Essa é uma rede de comunicação que conecta dispositivos próximos entre si, geralmente dentro de uma área limitada, como o alcance pessoal de um indivíduo, ela foi projetada para permitir a interconexão de dispositivos pessoais.</p>
+              <p>Bluetooth provê uma forma de conectar e trocar informações entre dispositivos como smartphones, fones sem fio, laptops, PCs, impressoras, câmeras digitais dentre outros, através de frequências de rádio de curto alcance, segura e de baixo custo.</p>
+
+              <p><strong>Especificação: alcance e transmissão</strong></p>
+              <p>A especificação Bluetooth foi inicialmente projetada com o objetivo de desenvolver dispositivos interconectáveis de baixo consumo de energia, através de freqüências de rádio de curto alcance – de 1 a 100 metros, dependendo da categoria do dispositivo. Ou seja, se estiverem um ao alcance do outro, dois dispositivos que implementam a especificação Bluetooth podem se comunicar, mesmo se não estiverem na mesma sala, mas, respeitando uma distância máxima de até 100 metros.</p>
+              <p>Até quantos dados o Bluetooth pode transmitir? Isso depende de requisitos como quantidade de energia necessária na transmissão, taxa de transferência e distância.</p>
+
+              <p><strong>Escolha do nome</strong></p>
+              <p>A história contada para a escolha do nome é que um m dos engenheiros da equipe que desenvolvia o Bluetooth estava lendo um livro histórico sobre Vikings e isso inspirou a ideia do nome “Bluetooth”: uma homenagem ao rei da Dinamarca e Noruega, Harald Blåtand, que na língua inglesa é chamado de Harold Bluetooth. O nome do rei foi escolhido pelo fato dele ter unificado as tribos de seu país, semelhantemente ao que a tecnologia pretende fazer: unificar tecnologias diferentes, garantindo interoperabilidade entre diferentes dispositivos.</p>
+              <p>Já o logotipo do Bluetooth é a união das runas nórdicas Hagall e Berkanan, correspondentes às letras H e B do nosso alfabeto (uma referência ao nome do rei Harald Blåtand).  As runas nórdicas são um sistema de escrita antigo utilizado pelos povos germânicos do norte da Europa durante a Era Viking, composto por caracteres alfabéticos.</p>
+              <img src="images/bluetooth_symbol.png" alt="Símbolos Bluetooth" width="50%">
+              <p class="mt-3">Além disso, "Blåtand" é uma palavra em dinamarquês que pode ser traduzida literalmente como "dente azul". Na época em que Harald Blåtand viveu, ele era conhecido por ter um dente que parecia ter uma tonalidade azulada, e esse detalhe físico acabou se tornando parte de sua identidade histórica.</p>
+              
+              <p><strong>Bluetooth SIG, o que é?</strong></p>
+              <p>O projeto da especificação Bluetooth começou quando a empresa de celulares Ericsson se juntou a outras empresas como Intel Corporation, International Business Machines Corporation (IBM), Nokia Corporation e Toshiba Corporation para formarem o Bluetooth Special Interest Group (SIG) em 1998. Em 1999 outras empresas se juntaram ao SIG como 3Com Corporation, Lucent/Agere Technologies Inc., Microsoft Corporation e Motorola Inc. O trabalho conjunto de todos os membros do SIG permitiu o desenvolvimento da especificação Bluetooth, através de padrões abertos para assegurar uma rápida aceitação e compatibilidade com as tecnologias disponíveis no mercado.</p>
+              <p>Além disso, é o grupo responsável por atualizar e lançar novas versões do Bluetooth, além de certificar os produtos que atendem aos requisitos estabelecidos. O programa de certificação tem como objetivo garantir que os novos produtos lançados foram testados e estão de acordo com os requisitos estabelecidos pelo Bluetooth SIG, além de garantir que os produtos sejam compatíveis e capazes de se conectar e comunicar corretamente com outros dispositivos Bluetooth. Por fim, após passar por esse programa de certificação, os produtos podem exibir o logotipo do Bluetooth e são reconheciddos como dispositivos confiáveis e interoperáveis.</p>
+
+              <p><strong>Objetivos</strong></p>
+              <p>A tecnologia surgiu com o objetivo de resolver alguns principais problemas:</p>
+              <ul>
+                <li><strong>Conectividade sem fio:</strong> O Bluetooth permite que dispositivos se conectem e se comuniquem sem fio, facilitando a transferência de dados, áudio, vídeo e outros tipos de informações entre eles.</li>
+                <li><strong>Interoperabilidade:</strong>O Bluetooth busca garantir que dispositivos de diferentes fabricantes possam se conectar e se comunicar uns com os outros. Isso é possível devido aos padrões e especificações estabelecidos pelo Bluetooth Special Interest Group (SIG), que promovem a compatibilidade e a interoperabilidade entre os dispositivos Bluetooth certificados.</li>
+                <li><strong>Baixo consumo de energia (mais barata):</strong>O Bluetooth tem sido desenvolvido com foco em eficiência energética, permitindo a comunicação sem fio entre dispositivos com um consumo de energia relativamente baixo. Isso é especialmente importante para dispositivos portáteis e de baixa potência, como fones de ouvido sem fio, smartwatches e dispositivos IoT.</li>
+              </ul>
+              <p class="mt-3">Enquanto a tecnologia tinha como objetivo resolver esses problemas, como já comentado, a SIG tinha como principal objetivo estabelecer os padrões técnicos e especificações para garantir a interoperabilidade e compatibilidade entre dispositivos de diferentes fabricantes. Nesse contexto, o Bluetooth ganhou popularidade, se tornando um dos principais métodos de conexão entre dispositivos da atualidade. Basicamente, inicialmente, a ideia era apenas eliminar a necessidade de cabos para estabelecer comunicação entre dispositivos. Contudo, com o andamento do projeto, ficou claro que as aplicações de uma tecnologia desse tipo eram ilimitadas.</p>
+            
+              <p><strong>Como funciona? Resumidamente</strong></p>
+              <p>Funciona de forma parecida com o Wi-Fi. Ele usa ondas de rádio para enviar dados entre dispositivos em distâncias curtas. Agora, enquanto o Wi-Fi usa ondas de rádio para transmitir dados entre o roteador e o dispositivo, o Bluetooth faz isso entre os dispositivos. Então, basicamente, se dois aparelhos têm uma opção de Bluetooth, elas podem transmitir dados entre si.</p>
+              <p>Agora, embora o Bluetooth ainda funcione na frequência de 2,4 GH, assim como o Wi-Fi, ele funciona principalmente em distâncias mais curtas e usa sinais muito mais fracos - apenas 1 milliwatt de potência. Por exemplo, um pequeno laser produz 5 milliwatt de potência. Isso garante uma melhor eficiência energética e por isso se torna uma opção mais econômica.</p>
+              <p>Além disso, o Bluetooth pode conectar 8 dispositivos ao mesmo tempo a um mesmo dispositivo sem nenhuma interferência entre essas conexões. Por exemplo, podemos conectar a um mesmo laptop um mouse, um teclado e um fone sem fio ao mesmo tempo sem que haja interferência entre essas conexões. E também não terá nenhuma interferência de outros dispositivos conectados utilizando outras formas de comunicação sem fio como portas de garagem ou babás eletrônicas que também utilizam a mesma faixa de frequência em torno de 2,4 GHz. Enquanto que, utilizando a tecnologia de Wi-Fi, teríamos problemas com interferências.</p>
+              <p>Isso ocorre porque o Bluetooth opera em uma faixa de frequência central em torno de 2,4 GHz para suas transmissões, que é compartilhada por outros dispositivos sem fio, como Wi-Fi, telefones sem fio e micro-ondas. Entretanto, para evitar interferências com esses dispositivos, o Bluetooth utiliza uma técnica chamada "saltos adaptativos em frequência". Basicamente, o Bluetooth consegue encontrar frequências menos congestionadas para transmitir seus dados, reduzindo as interferências e melhorando a qualidade da conexão, explicaremos esse mecanismo nas próximas seções.</p>
+              <p>A conexão entre dois dispositivos Bluetooth ocorre da seguinte maneira de forma mais geral e resumida:</p>
+              <ul>
+                <li>Os dispositivos Bluetooth enviam sinais para descobrir outros dispositivos nas proximidades. Uma vez que um dispositivo encontra outro dispositivo com o qual deseja se conectar, inicia-se o processo de pareamento.</li>
+                <li>Durante o pareamento, os dispositivos trocam informações iniciais de identificação para iniciar o estabelecimento de conexão.</li>
+                <li>Durante o estabelecimento de conexão, os dispositivos trocam informações e decidem como irão se comunicar, isto é, definirem informações fundamentais sobre a topologia da rede e o tipo de link que estabelecerão.</li>
+                <li>Após essa breve troca de informações, os dispositivos estabelecem uma conexão para formar uma rede. A rede formada pelos dispositivos Bluetooth conectados é chamada de "piconet".</li>
+                <li>Uma vez estabelecida a conexão, os dispositivos iniciam o salto de frequência para permanecerem continuamente conectados e evitar interferências.</li>
+                <li>Por fim, podemos levar um dispositivo a uma distância razoável do outro que a conexão continuará funcionando, desde que não se afaste muito.</li>
+              </ul>
 
             </p>
           </ul>
-          <h1 class="display-4 title">Objetivo</h1>
-          <ul>
-            <p class="lead">
-
-              <br /><br />
-
-            </p>
-          </ul>
-          <h1 class="display-4 title">Como funciona? Resumidamente</h1>
-          <ul>
-            <p class="lead">
-
-              <br /><br />
-
-            </p>
-          </ul>
-
-
         </div>
         <br />
         <!-- Topologia -->
@@ -175,7 +134,32 @@
           <ul>
             <p class="lead">
 
-              <br /><br />
+              <p><strong>O que é topologia de uma rede?</strong></p>
+              <p>A topologia de rede refere-se à forma como os dispositivos em uma rede estão fisicamente ou logicamente interconectados e organizados, isto é, ela define a estrutura básica da rede e como os dispositivos se comunicam entre si.</p>
+              <p>Por exemplo, a topologia da rede da Internet é extremamente complexa e abrange uma combinação de várias topologias diferentes, devido à sua natureza distribuída e global, a Internet não possui uma topologia única e definida. Entretanto, analisando uma parcela da Internet podemos identificar uma topologia: por exemplo, a topologia em estrela é frequentemente encontrada em redes locais (LANs), onde todos os dispositivos da rede são conectados a um ponto central, como um roteador de acesso, por meio de cabos individuais ou de Wi-Fi, e é esse ponto de acesso que vai os conectar com o resto da Internet.</p>
+              <img src="images/lan_example.png" alt="LAN Example" width="50%">
+              
+              <p class="mt-3"><strong>Topologia Bluetooth</strong></p>
+              <p>Já a topologia de uma rede Bluetooth, pode assumir a topologia em estrela, como as redes locais da Internet ou uma topologia em malha parcial.</p>
+              
+              <p><strong>Topologia em estrela - piconet</strong></p>
+              <img src="images/piconet.png" alt="Piconet" width="50%">
+              <p class="mt-3">Uma topologia em estrela é estabelecida quando o dispositivo mestre se conecta diretamente a dispositivos escravos individuais, onde cada dispositivo escravo se comunica apenas com o dispositivo mestre e não com os outros dispositivos escravos. Esse tipo de comunicação é chamado de piconet. Cada piconet é um conjunto de até oito dispositivos Bluetooth e um dispositivo é designado como mestre e os outros como escravos..</p>
+              <p>Como explicado, durante uma operação típica, um canal físico de rádio é compartilhado por um grupo de dispositivos que estão sincronizados a um clock comum (mesma frequência) e a um mesmo padrão de saltos de frequência, isto é, seguem uma sequência coordenada de mudanças de frequência durante a transmissão. Um dispositivo que provê a sincronização de referência da frequência é chamado de mestre e todos os outros são chamados de escravos.</p>
+              <p>Além da comunicação dentro de uma mesma piconet utilizar um padrão de saltos de frequência, explicada anteriormente, o canal físico é subdividido em unidades de tempos denominados slots. Dados são transmitidos entre dispositivos Bluetooth em pacotes que são posicionados nestes slots. Por exemplo, um pacote geralmente é dividido em vários slots.</p>
+              <p>Em uma piconet, o mestre transmite em slots de tempo pares enquanto que os escravos transmitem apenas em slots de tempo ímpares. Em cada slot de tempo, devido ao mecanismo frequency hopping, um canal de frequência diferente é utilizado, ou seja, após cada envio ou recebimento de pacotes, o canal é trocado, antes mesmo da transmissão do próximo pacote.</p>
+              <p>Por fim, a comunicação entre o mestre e os escravos é assimétrica. O escravo só pode transmitir dados para o mestre quando é solicitado pelo mestre. Quando um escravo tem dados para transmitir, ele deve aguardar por um convite do mestre para realizar a transmissão. O mestre reserva slots de tempo para os escravos transmitirem seus dados, garantindo que a comunicação ocorra de maneira ordenada e sem colisões.</p>
+              
+              <p><strong>Possibilidade Bluetooth scatternet</strong></p>
+              <img src="images/scatternet.svg" alt="Scatternet" width="50%">
+              <p class="mt-3">Porém, a tecnologia também permite a formação de uma topologia em malha parcial, onde duas ou mais piconets podem se conectar através de um dispositivo Bluetooth comum a ambas. Isso acontece quando uma rede piconet é formada, onde um dispositivo mestre se conecta a vários dispositivos escravos, porém, alguns desses dispositivos escravos podem, por sua vez, atuar como mestres para se conectar a outros dispositivos escravos, formando outras redes piconets.</p>
+              <p>Dessa forma, essa configuração permite que os dispositivos se comuniquem mesmo que não estejam diretamente ao alcance uns dos outros. Isso porque a comunicação pode ser “roteada” através de dispositivos intermediários que são comuns a mais de uma piconet, atuando como se fossem “pontes” entre as redes piconet. Essa configuração é chamada de <strong>scatternet</strong>.</p>
+              <p>Implementações atuais de dispositivos Bluetooth baseiam-se basicamente em conexões ponto-a-ponto. Entretanto, a especificação Bluetooth não define apenas soluções ponto-a-ponto como também topologias mais complexas. O objetivo é a formação de scatternets que forneçam comunicação efetiva e eficiente através de vários de nós com tempo de resposta aceitável e baixo consumo de energia para o desenvolvimento de aplicações fim-a-fim.</p>
+              <p>Por exemplo, em ambientes de automação residencial, diferentes dispositivos Bluetooth, como lâmpadas, termostatos, alto-falantes, câmeras de segurança, poderiam formar uma scatternet para se comunicar entre si e com um hub central. Entretanto, pesquisamos por exemplos de aplicação, mas realmente não existem exemplos de comunicação scatternet com Bluetooth famosos e práticos, porém é uma possibilidade de utilização.</p>
+              
+              <p><strong>Protocolos e componentes</strong></p>
+              <p>Protocolo é um conjunto de regras e procedimentos que definem a comunicação entre uma ou mais entidades. Eles definem ações tomadas ao transmitir / receber mensagens, ações tomadas caso eventos externos ocorram durante essa transmissão e o formato / ordem das mensagens trocadas.</p>            
+              <p>Nesse contexto, a arquitetura ou estrutura de uma rede é projetada da seguinte forma: os projetistas definem camadas, nessas camadas, diferentes protocolos podem pertencer a cada uma delas. Por fim, para cada protocolo, temos diferentes hardwares / softwares de rede que podem executá-los.</p>
 
             </p>
           </ul>
@@ -183,35 +167,73 @@
 
 
         <br />
-        <!-- Arquitetura do Bluetooth -->
+        <!-- Arquitetura -->
         <div class="container content" id="Arquitetura">
-          <h1 class="display-3 title">Arquitetura do Bluetooth</h1>
-          <h1 class="display-4 title">Nível de enlace de dados</h1>
+          <h1 class="display-3 title">Arquitetura</h1>
           <ul>
             <p class="lead">
 
-              <br /><br />
+              <p>Para o Bluetooth não é diferente, sua arquitetura consiste basicamente de dois componentes: um transceiver (hardware) e uma pilha de protocolos. Esta arquitetura oferece serviços e funcionalidades básicas que tornam possível a conexão de dispositivos e a troca de uma variedade de tipos de dados entre estes dispositivos.</p>
+              <p>Basicamente, o meio físico utilizado na transmissão de dados é uma faixa de rádio não licenciada destinada a para comunicações sem fio em dispositivos industriais, científicos e médicos.</p>           
+              <p>Isso significa que, em muitos países, as faixas de frequência de rádio são regulamentadas pelo governo, e algumas faixas específicas requerem uma licença do órgão regulador para serem utilizadas. Isso ocorre para garantir o uso organizado e documentado do espectro de frequência e evitar interferências prejudiciais entre diferentes usuários. No entanto, existem algumas faixas de frequência que são designadas como "não licenciadas" ou "livres", o que significa que os usuários não precisam obter uma licença específica do governo para operar dispositivos de rádio nessas faixas. Nesse sentido, o Bluetooth utiliza uma dessas faixas “livres” para a comunicação.</p>           
+              <p>Essa faixa varia entre 2.4 GHz e 2.485GHz. Como já explicado anteriormente, o sistema emprega um mecanismo denominado frequency hopping, que “salta” constantemente de freqüência para combater interferência e enfraquecimento do sinal. A cada segundo são realizados 1600 saltos de freqüência.</p>           
+              <p>A pilha de protocolos do Bluetooth segue o exemplo abaixo:</p>
+              <img src="images/bluetooth_layers.svg" alt="Bluetooth Layers" width="50%">
 
-            </p>
-          </ul>
-          <h1 class="display-4 title">Nível físico</h1>
-          <ul>
-            <p class="lead">
+              <p class="mt-3"><strong>Explicação das camadas</strong></p>
+              <p>Observando a pilha de protocolos do Bluetooth, já conseguimos enxergar algumas diferenças em relação a pilha de protocolos da Internet. Basicamente, a pilha de protocolos da Inernet segue o modelo OSI ou a arquitetura de 5 camadas (exibida da imagem abaixo). Apesar dessas arquiteturas representarem modelos de referência amplamente utilizados, nem todas as arquiteturas e protocolos de rede seguem esses modelos. Dessa forma, o Bluetooth é um exemplo de uma tecnologia de rede que possui sua própria arquitetura e modelo de camadas, que é diferente desses modelos.</p>
+              <img src="images/internet_layers.svg" alt="Internet Layers" width="50%">
+              <p class="mt-3">Fazendo um paralelo com a Internet que temos grande simplificação da pilha de protocolos da Internet quando comparada com a pilha de protocolos do Bluetooth, pois há diferenças significativas em relação ao número de protocolos, camadas e hardwares envolvidos na transmissão.</p>
+              <p>Neste contexto, protocolos de transporte não se equivalem aos protocolos da camada de transporte do modelo OSI. Ao invés disso, estes protocolos correspondem às camadas físicas e de enlace do modelo OSI.</p>
+              
+              <p><strong>Camada de transporte:</strong> composta por 4 subcamadas com funções específicas e que implementam apenas um protocolo em cada uma delas. São elas: rádio frequência (RF), Baseband, Link Manager, Logical Link Control and Adaptation (L2CAP). Estes protocolos ou subcamadas suportam tanto comunicação síncrona quanto assíncrona e todos estes são indispensáveis para a comunicação entre dispositivos Bluetooth.</p>
+              <p>Como os protocolos mencionados nesta camada são únicos e têm funções específicas, elas também podem ser conhecidas como “subcamadas” da camada de transporte com um protocolo. Com as explicações a seguir isso ficará mais claro.</p>
+              <ul>
+                <li><strong>Rádio frequência (RF):</strong> a especificação da camada de rádio corresponde essencialmente ao projeto dos tranceivers Bluetooth. Contém um sintetizador de rádio frequência, filtros Gaussianos, recuperação de clock e detector de dados.</li>
+                <li><strong>Baseband:</strong> esta camada define como dispositivos Bluetooth localizam e se conectam a outros dispositivos. Define os papéis de mestre e escravo, padrões de saltos de frequência e tipos de pacotes. Suporta links Synchronous Connection-Oriented (SCO) e Assynchronous Connection-Less (ACL).</li>
+                <li><strong>Link Manager:</strong> é responsável por implementar o Link Manager Protocol (LMP) no Bluetooth. Avalia as características do meio de transmissão, realiza autenticação, criptografia e controle de energia.</li>
+                <li><strong>Logical Link Control and Adaptation (L2CAP):</strong> serve de interface entre os protocolos de camadas superiores e os protocolos de transporte de camadas inferiores. Responsável pela fragmentação e remontagem de pacotes.</li>
+              </ul>
+              <p class="mt-3"><strong>Camada de middleware:</strong> inclui protocolos de terceiros e padrões industriais que permitem a integração dos dispositivos Bluetooth com outros sistemas e redes. Protocolos de padrões industriais incluem Point-to-Point Protocol (PPP), Internet Protocol (IP), Transmission Control Protocol (TCP), Wireless Application Protocol (WAP), etc.</p>
+              <p><strong>Camada de aplicação:</strong> consiste das próprias aplicações que utilizam links Bluetooth. Pode incluir aplicações legadas ou aplicações orientadas a Bluetooth.</p>
 
-              <br /><br />
+              <p><strong>Exemplo prático pela arquitetura</strong></p>
+              <img src="images/airpod_and_computer.png" alt="Airpod and Computer" width="50%">
+              <p class="mt-3"><strong>Camada de aplicação:</strong> No laptop, a aplicação do YouTube é iniciada para reproduzir a música. Fazendo assim, uma requisição para servidores do site para obter os dados através de um navegador Web.</p>
+              <p><strong>Camada de middleware:</strong> Os dados de áudio de um servidor do YouTube são encapsulados em protocolos de terceiros e padrões industriais, como o HTTP (Hypertext Transfer Protocol), Transmission Control Protocol (TCP) e o Internet Protocol (IP), e enviados para a aplicação no laptop. Podemos perceber que é graças a esses protocolos que a aplicação se comunica com dispositivos externos, como o fone de ouvido Bluetooth.</p>
+              <p><strong>Camada de transporte (laptop):</strong> Quando a aplicação que é executada em um dos dispositivos Bluetooth recebe os dados da camada middleware, os pacotes de dados são fragmentados em pacotes menores para a transmissão. Isso garante que os dados possam ser transmitidos de forma eficiente e confiável através da conexão Bluetooth.</p>
+              <p>Os protocolos presentes nas subcamadas inferiores suportarão uma comunicação síncrona com os fones de ouvido, através das configurações definidas e pela conversão para sinais de radiofrequência.</p>
+              <p><strong>Camada de transporte (fones de ouvido):</strong> Quando o fone de ouvido recebe os sinais através de sinais de rádiofrequência, os sinais serão convertidos e os pacotes serão remontados para que os fones de ouvido possam reproduzir o áudio da música.</p>
 
             </p>
           </ul>
         </div>
 
         <br />
-        <!-- Modos de Operação -->
-        <div class="container content" id="ModosdeOperação">
-          <h1 class="display-3 title">Modos de Operação do Bluetooth</h1>
+        <!-- Processo de Comunicação -->
+        <div class="container content" id="Processo_Comunicacao">
+          <h1 class="display-3 title">Processo de Comunicação</h1>
           <ul>
             <p class="lead">
 
-              <br /><br />
+              <p><strong>Pacote do Bluetooth</strong></p>
+              <p>A transmissão de dados é feita através de slots de tempos. Um único slot possui 625 microssegundos de comprimento, representando um pacote de dados que ocupa um único slot. </p>
+              <img src="images/package_bluetooth.png" alt="Package Bluetooth" width="50%">
+              <p class="mt-3">O código de acesso contém o endereço da piconet (para filtrar mensagens de outra piconet) e possui geralmente 72 bits de comprimento. O cabeçalho possui 18 bits e inclui o endereço de um dispositivo escravo ativo na rede Bluetooth. O campo payload é onde trafega os dados da aplicação, pode conter de 0 a 2745 bits de dados.</p>
+            
+              <p><strong>Como funciona o processo de comunicação?</strong></p>
+              <img src="images/comunication_process.png" alt="Processo de Comunicação" width="50%">
+              <p class="mt-3">O processo de comunicação do Bluetooth ocorre da seguinte forma. Basicamente, um dispositivo Bluetooth pode estar nos seguintes estados:</p>
+              <ul>
+                <li><strong>Espera:</strong> quando está ligado, mas ainda não se juntou a uma piconet;</li>
+                <li><strong>Solicitação:</strong> quando envia requisições de busca de outros dispositivos com os quais possa se conectar;</li>
+                <li><strong>Página:</strong> quando um dispositivo mestre de uma piconet existente envia mensagens à procura de dispositivos que possam se juntar à sua piconet;</li>
+                <li><strong>Conectado:</strong> quando uma comunicação é bem-sucedida entre o mestre e um novo dispositivo, que assume o papel de escravo e recebe um endereço que o identifica na piconet;</li>
+                <li><strong>Transmissão:</strong> quando um escravo conectado está transmitindo dados, sob permissão do mestre. Após a transmissão, o escravo retorna ao estado de conectado;</li>
+                <li><strong>Bloqueado:</strong> estado de baixo consumo de energia, onde o escravo não está ativo por um período pré-determinado de tempo, sem transferência de dados;</li>
+                <li><strong>Escuta:</strong> estado de baixo consumo de energia em que o escravo "dorme" por um número pré-definido de slots, acordando apenas para a transmissão de dados em seu slot de tempo designado;</li>
+                <li><strong>Estacionado:</strong> quando o dispositivo mestre instrui um escravo a entrar neste estado quando não há dados a serem enviados ou recebidos. O escravo perde seu endereço atual na piconet, que será dado a outro escravo que está sendo retirado do estado de estacionado.</li>
+              </ul>
 
             </p>
           </ul>
