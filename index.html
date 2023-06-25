@@ -793,9 +793,41 @@
             
             Além de funcionar como um mecanismo que diminui a interferência de comunicação, o FHSS, por utilizar de
             pseudo-aleatoriedade na seleção de frequência, também dificulta a interceptação de dados, sendo um componente importante
-            de segurança.
+            de segurança.  
             
+            <br /><br />
+
+            <p class="h4">Por que não existem aplicações e exemplos de redes Bluetooth em Scatternet famosos e conhecidos? Quais podem ser as possíveis desvantagens?</p>
+
+            <ul>
+              <li><strong>Consumo de energia e latência:</strong>A formação de uma scatternet envolve o envio e recebimento contínuo de dados entre os dispositivos, o que pode aumentar o consumo de energia. Além disso, o roteamento de dados por meio de dispositivos intermediários na malha parcial introduz latência adicional na comunicação. Em cenários onde a eficiência energética e a latência baixa são essenciais, a scatternet pode não ser a opção mais adequada.</li>
+              <li><strong>Conflitos de frequência:</strong>Em uma scatternet, os dispositivos operam em frequências de rádio limitadas disponíveis para o Bluetooth. Quando múltiplas piconets estão ativas próximas umas das outras, pode haver interferência de sinal e conflitos de frequência, afetando a qualidade da comunicação. A resolução desses conflitos requer técnicas avançadas de controle de acesso ao meio e mitigação de interferências.</li>
+              <li><strong>Roteamento de dados:</strong>hoje, não existem protocolos de roteamento padronizados e amplamente adotado para scatternets Bluetooth.
+                <p class="mt-3">Embora seja possível implementar extensões e adaptações dos protocolos existentes, como o LMP e o L2CAP, pode ser bem complexo de implementar dependendo da aplicação, principalmente se todos os dispositivos precisarem enviar mensagens uns para os outros.</p>
+                <p>Isso porque, para realizar o roteamento em uma scatternet, o sistema que deseja enviar a mensagem precisa ter conhecimento sobre a rede em que o dispositivo de destino está localizado. Ele deve enviar a mensagem para um dispositivo intermediário que atue como uma ponte entre as redes. Esse dispositivo intermediário, por sua vez, deve ter conhecimento das redes pelas quais a mensagem precisa ser enviada e dos dispositivos intermediários pelos quais ela deve passar para alcançar o destino final.</p>
+              </li>
+            </ul>
+
+
+            <br /><br />
+            <p class="h4">Fazendo um paralelo com a Internet que temos algumas diferenças entre a pilha de protocolos da Internet quando comparada com a pilha de protocolos do Bluetooth. Por que? Cite algumas diferenças em relação ao número de protocolos, camadas e hardwares envolvidos na transmissão.</p>
+
+            <ul>
+              <li><strong>Número de camadas:</strong>As camadas da Internet são compostas por cinco ou sete camadas (aplicação, transporte, rede, enlace e físico), enquanto a arquitetura do Bluetooth é baseada em um modelo de três camadas (aplicação, middleware e transporte).</li>
+              <li><strong>Número de protocolos por camada:</strong>Na pilha de protocolos da Internet, cada camada geralmente possui vários protocolos associados para desempenhar diferentes funções. Por exemplo, na camada de transporte da Internet, temos protocolos como TCP (Transmission Control Protocol), UDP (User Datagram Protocol), SCTP (Stream Control Transmission Protocol) e outros. Já na camada de rede, temos protocolos como IP (Internet Protocol), ICMP (Internet Control Message Protocol) e outros, além dos inúmeros protocolos da camada de aplicação.
+                <p class="mt-3">Por outro lado, na pilha de protocolos do Bluetooth, o número de protocolos em cada camada é relativamente menor, como vimos na apresentação. Isso ocorre porque o Bluetooth é projetado para um conjunto mais limitado de funcionalidades e casos de uso específicos, com foco em comunicação sem fio de curto alcance. Portanto, a pilha de protocolos do Bluetooth é mais simplificada em comparação com a pilha de protocolos da Internet.</p>
+              </li>
+              <li><strong>Número de hardwares envolvidos na transmissão:</strong>Na Internet, a comunicação ocorre por meio de uma rede global que envolve uma variedade de dispositivos e hardwares. Desde roteadores, switches, cabos de fibra óptica, modems, proxies… Isto é, existe um número significativo de elementos envolvidos na transmissão dos dados. Isso permite um amplo alcance da comunicação na Internet porque é uma rede que precisa ter cobertura global.
+                <p class="mt-3">Por outro lado, o Bluetooth é projetado para comunicação sem fio de curto alcance, geralmente dentro de um raio de 10 metros. Nesse caso, apenas um hardware é envolvido na transmissão que é o transceptor Bluetooth presente nos dispositivos finais.</p>
+              </li>
+            </ul>
+
+            <br/><br />
+            <p class="h4">O nome Bluetooth nasceu no século X com o rei da Dinamarca, rei Harald Bluetooth, que se engajava na diplomacia entre os países da Europa, fazendo com que estes estabelecessem acordos comerciais entre si. Por que essa foi uma ótima inspiração para o nome da tecnologia?</p>
+            O nome Bluetooth foi uma ótima inspiração para a tecnologia porque reflete um dos principais objetivos dessa tecnologia: a interoperabilidade. Assim como o rei Harald Bluetooth promovia a união e estabelecia acordos comerciais entre países com diferentes costumes e culturas, o Bluetooth permite que dispositivos eletrônicos com sistemas operacionais, funções e características completamente diferentes troquem dados entre si. A ideia é unir "tribos tecnológicas" distintas, possibilitando a comunicação e a colaboração sem fio entre dispositivos, independentemente de suas diferenças, assim como o rei Bluetooth unia povos com costumes e culturas diversas para fins comerciais.
             
+
+
             <br /><br />
             <p class="h4">Como o Bluetooth Mesh é mais escalável que o modelo tradicional?</p>
             
@@ -803,24 +835,6 @@
             inerente às capacidades físicas da tecnologia. O Bluetooth Mesh permite que aparelhos sejam utilizados de forma análoga à
             roteadores, apenas retransmitindo dados ao longo da rede. Dessa forma, uma rede Bluetooth Mesh espande o alcance nornal
             dessa tecnologia e permite novos tipos de aplicações cobrindo maiores distâncias.
-
-
-            <br /><br />
-            <p class="h4">PERGUNTA</p>
-
-            RESPOSTA
-
-
-            <br /><br />
-            <p class="h4">PERGUNTA</p>
-
-            RESPOSTA
-
-
-            <br /><br />
-            <p class="h4">PERGUNTA</p>
-
-            RESPOSTA
 
           </ul>
         </div>
