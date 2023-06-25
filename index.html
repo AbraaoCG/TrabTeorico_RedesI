@@ -45,7 +45,7 @@
             <a class="nav-link" href="#ModosdeOperação">Modos de Operação</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#ReistInterferencia">Resistência à Interferência</a>
+            <a class="nav-link" href="#AntiInterferencia">Mecanismos contra a interferência</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Perfis_Bluetooth">Perfis Bluetooth</a>
@@ -219,13 +219,65 @@
 
         <br />
         <!-- Resistência à Interferencia -->
-        <div class="container content" id="ReistInterferencia">
-          <h1 class="display-3 title">Resistência à Interferencia</h1>
+        <div class="container content" id="AntiInterferencia">
+          <h1 class="display-3 title">Mecanismos contra a interferência</h1>
           <ul>
+            <h4 class="display-4 title">FHSS</h4>
             <p class="lead">
 
-              <br /><br />
+            O Espalhamento Espectral por Salto de Frequência (Frequency Hopping Spread Spectrum - FHSS) é uma técnica muito
+            importante amplamente utilizada pelo Bluetooth para mitigar os efeitos de interferências externas.
+            <br /><br />
+          
+            O funcionamento do FHSS se baseia em realizar saltos rápidos e sequenciais entre múltiplas frequências com um padrão
+            pré-definido. Dessa forma, as chances de haver interferência durante a comunicação se torna mínima, pois a frequência
+            de transmissão é alterada em períodos curtos de tempo. A escolha das frequências é feita de forma pseudo-aleatória, o
+            que, além de diminuir ruídos e interferências, também oferece uma camada extra e proteção no uso do Bluetooth.
+          
+            <br /><br />
+          </p>
 
+            <h4 class="display-4 title">FEC:</h4>
+            <p class="lead">
+
+            O Forward Error Correction (FEC) é um algoritmo utilizado no contexto do Bluetooth para detecção e correção de erros
+            durante a transmissão de dados. Esse algoritmo adiciona bits de redundância aos dados antes de enviá-los, permitindo
+            ao receptor reconstruir os dados originais mesmo que ocorram erros na transmissão.
+            <br /><br />
+          
+            O FEC utiliza técnicas matemáticas para calcular os bits de redundância, que são adicionados aos dados transmitidos.
+            Esses bits extras contêm informações que ajudam o receptor a identificar e corrigir os erros. Dessa forma, se ocorrer
+            uma interferência ou perda de dados durante a transmissão, o receptor pode utilizar as informações redundantes para
+            recuperar os dados originais.
+            <br /><br />
+          
+            Uma das vantagens do FEC é a capacidade de corrigir erros sem a necessidade de retransmissão dos dados. Isso é
+            especialmente útil em casos em que a retransmissão não é viável devido a restrições de tempo ou largura de banda. O
+            FEC oferece uma solução eficiente para lidar com erros de transmissão e melhorar a confiabilidade da comunicação
+            Bluetooth.
+            <br /><br />
+            </p>
+            <h4 class="display-4 title">ARQ:</h4>
+            <p class="lead">
+
+            O Automatic Repeat Request (ARQ) é um mecanismo utilizado no Bluetooth para detectar erros de transmissão e solicitar
+            a retransmissão dos dados. Quando ocorre um erro na transmissão, o receptor envia uma solicitação ao transmissor para
+            que os dados sejam reenviados.
+            <br /><br />
+          
+            O ARQ funciona de forma semelhante a um sistema de confirmação e retransmissão. Após receber os dados, o receptor
+            verifica a integridade dos mesmos. Se forem detectados erros, o receptor envia um sinal de controle ao transmissor,
+            indicando que ocorreu um erro e solicitando a retransmissão dos dados.
+            <br /><br />
+          
+            Existem diferentes variantes do ARQ, como o ARQ de repetição seletiva e o ARQ de solicitação de repetição. Cada
+            variante possui suas próprias características e estratégias para lidar com erros de transmissão.
+            <br /><br />
+          
+            O ARQ desempenha um papel importante na comunicação Bluetooth, pois ajuda a garantir que os dados sejam transmitidos 
+            de forma confiável. Quando combinado com outros mecanismos de detecção e correção de erros, como o FEC, o ARQ 
+            contribui para a melhoria da qualidade e confiabilidade das conexões Bluetooth.
+            <br /><br />
             </p>
           </ul>
         </div>
@@ -283,7 +335,7 @@
                   <strong>Headset Profile (HSP):</strong> Permite a conexão de fones de ouvido e headsets Bluetooth a dispositivos
                   para comunicação de áudio, como chamadas telefônicas.
                 </li>
-                <li>
+                <li>  
                   <strong>Phone Book Access Profile (PBAP, PBA):</strong> Permite o acesso e a transferência de dados de agenda
                   telefônica entre dispositivos, como sincronização de contatos de um smartphone para um sistema de navegação
                   veicular.
@@ -708,10 +760,10 @@
         <div class="container content" id="perguntas">
           <h1 class="display-3 title">Perguntas</h1>
           <ul style="list-style: none;" class="lead">
-            <br />
-            <p class="h4">PERGUNTA</p>
+            <br /><br />
+            <p class="h4">Além de evitar interferências, qual outra função importante do Espalhamento Espectral por Salto de Frequência (Frequency Hopping Spread Spectrum - FHSS)</p>
 
-            RESPOSTA
+            Além de funcionar como um mecanismo que diminui a interferência de comunicação, o FHSS, por utilizar de pseudo-aleatoriedade na seleção de frequência, também dificulta a interceptação de dados, sendo um componente importante de segurança.
 
 
             <br /><br />
