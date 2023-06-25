@@ -144,7 +144,7 @@
               
               <p><strong>Topologia em estrela - piconet</strong></p>
               <img src="images/piconet.png" alt="Piconet" width="50%">
-              <p class="mt-3">Uma topologia em estrela é estabelecida quando o dispositivo mestre se conecta diretamente a dispositivos escravos individuais, onde cada dispositivo escravo se comunica apenas com o dispositivo mestre e não com os outros dispositivos escravos. Esse tipo de comunicação é chamado de piconet. Cada piconet é um conjunto de até oito dispositivos Bluetooth e um dispositivo é designado como mestre e os outros como escravos..</p>
+              <p class="mt-3">Uma topologia em estrela é estabelecida quando o dispositivo mestre se conecta diretamente a dispositivos escravos individuais, onde cada dispositivo escravo se comunica apenas com o dispositivo mestre e não com os outros dispositivos escravos. Esse tipo de comunicação é chamado de piconet. Cada piconet é um conjunto de até oito dispositivos Bluetooth e um dispositivo é designado como mestre e os outros como escravos.</p>
               <p>Como explicado, durante uma operação típica, um canal físico de rádio é compartilhado por um grupo de dispositivos que estão sincronizados a um clock comum (mesma frequência) e a um mesmo padrão de saltos de frequência, isto é, seguem uma sequência coordenada de mudanças de frequência durante a transmissão. Um dispositivo que provê a sincronização de referência da frequência é chamado de mestre e todos os outros são chamados de escravos.</p>
               <p>Além da comunicação dentro de uma mesma piconet utilizar um padrão de saltos de frequência, explicada anteriormente, o canal físico é subdividido em unidades de tempos denominados slots. Dados são transmitidos entre dispositivos Bluetooth em pacotes que são posicionados nestes slots. Por exemplo, um pacote geralmente é dividido em vários slots.</p>
               <p>Em uma piconet, o mestre transmite em slots de tempo pares enquanto que os escravos transmitem apenas em slots de tempo ímpares. Em cada slot de tempo, devido ao mecanismo frequency hopping, um canal de frequência diferente é utilizado, ou seja, após cada envio ou recebimento de pacotes, o canal é trocado, antes mesmo da transmissão do próximo pacote.</p>
@@ -156,10 +156,6 @@
               <p>Dessa forma, essa configuração permite que os dispositivos se comuniquem mesmo que não estejam diretamente ao alcance uns dos outros. Isso porque a comunicação pode ser “roteada” através de dispositivos intermediários que são comuns a mais de uma piconet, atuando como se fossem “pontes” entre as redes piconet. Essa configuração é chamada de <strong>scatternet</strong>.</p>
               <p>Implementações atuais de dispositivos Bluetooth baseiam-se basicamente em conexões ponto-a-ponto. Entretanto, a especificação Bluetooth não define apenas soluções ponto-a-ponto como também topologias mais complexas. O objetivo é a formação de scatternets que forneçam comunicação efetiva e eficiente através de vários de nós com tempo de resposta aceitável e baixo consumo de energia para o desenvolvimento de aplicações fim-a-fim.</p>
               <p>Por exemplo, em ambientes de automação residencial, diferentes dispositivos Bluetooth, como lâmpadas, termostatos, alto-falantes, câmeras de segurança, poderiam formar uma scatternet para se comunicar entre si e com um hub central. Entretanto, pesquisamos por exemplos de aplicação, mas realmente não existem exemplos de comunicação scatternet com Bluetooth famosos e práticos, porém é uma possibilidade de utilização.</p>
-              
-              <p><strong>Protocolos e componentes</strong></p>
-              <p>Protocolo é um conjunto de regras e procedimentos que definem a comunicação entre uma ou mais entidades. Eles definem ações tomadas ao transmitir / receber mensagens, ações tomadas caso eventos externos ocorram durante essa transmissão e o formato / ordem das mensagens trocadas.</p>            
-              <p>Nesse contexto, a arquitetura ou estrutura de uma rede é projetada da seguinte forma: os projetistas definem camadas, nessas camadas, diferentes protocolos podem pertencer a cada uma delas. Por fim, para cada protocolo, temos diferentes hardwares / softwares de rede que podem executá-los.</p>
 
             </p>
           </ul>
@@ -172,6 +168,10 @@
           <h1 class="display-3 title">Arquitetura</h1>
           <ul>
             <p class="lead">
+
+              <p><strong>Protocolos e componentes</strong></p>
+              <p>Protocolo é um conjunto de regras e procedimentos que definem a comunicação entre uma ou mais entidades. Eles definem ações tomadas ao transmitir / receber mensagens, ações tomadas caso eventos externos ocorram durante essa transmissão e o formato / ordem das mensagens trocadas.</p>            
+              <p>Nesse contexto, a arquitetura ou estrutura de uma rede é projetada da seguinte forma: os projetistas definem camadas, nessas camadas, diferentes protocolos podem pertencer a cada uma delas. Por fim, para cada protocolo, temos diferentes hardwares / softwares de rede que podem executá-los.</p>
 
               <p>Para o Bluetooth não é diferente, sua arquitetura consiste basicamente de dois componentes: um transceiver (hardware) e uma pilha de protocolos. Esta arquitetura oferece serviços e funcionalidades básicas que tornam possível a conexão de dispositivos e a troca de uma variedade de tipos de dados entre estes dispositivos.</p>
               <p>Basicamente, o meio físico utilizado na transmissão de dados é uma faixa de rádio não licenciada destinada a para comunicações sem fio em dispositivos industriais, científicos e médicos.</p>           
